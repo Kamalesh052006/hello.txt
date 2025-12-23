@@ -7,7 +7,7 @@ struct Team {
     float overs;
 };
 
-// Function to initialize team details
+
 void initializeTeam(struct Team *team, char *name) {
     strcpy(team->name, name);
     team->runs = 0;
@@ -15,14 +15,14 @@ void initializeTeam(struct Team *team, char *name) {
     team->overs = 0.0;
 }
 
-// Function to update team score
+
 void updateScore(struct Team *team, int runs, int wickets, float overs) {
     team->runs += runs;
     team->wickets += wickets;
     team->overs = overs;
 }
 
-// Function to display team score
+
 void displayScore(struct Team team) {
     printf("%s - %d/%d in %.1f overs\n", team.name, team.runs, team.wickets, team.overs);
 }
